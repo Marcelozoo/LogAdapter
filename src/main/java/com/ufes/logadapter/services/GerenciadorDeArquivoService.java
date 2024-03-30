@@ -4,8 +4,9 @@ package com.ufes.logadapter.services;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import com.ufes.logadapter.JsonAdapter;
-import com.ufes.logadapter.JsonApiSingleton;
+
+import com.ufes.logadapter.adapter_com_singleton.JsonAdapter;
+import com.ufes.logadapter.adapter_com_singleton.JsonApiSingleton;
 import com.ufes.logadapter.interfaces.IArquivoLog;
 
 public class GerenciadorDeArquivoService {

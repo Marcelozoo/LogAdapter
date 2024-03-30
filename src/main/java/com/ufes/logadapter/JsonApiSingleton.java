@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import com.ufes.logadapter.Log;
 
 public class JsonApiSingleton {
 
@@ -26,7 +25,8 @@ public class JsonApiSingleton {
         return instancia;
     }
 
-    public void salvarLog(String msg, String operacao, String nome, LocalDate data, LocalTime hora, boolean usuarioAutenticado) {
+    public void salvarLog(String msg, String operacao, String nome, LocalDate data, LocalTime hora,
+            boolean usuarioAutenticado) {
 
         if (arquivoJson == null) {
             criaArquivo();

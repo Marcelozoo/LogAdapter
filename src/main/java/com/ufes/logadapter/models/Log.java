@@ -1,4 +1,4 @@
-package com.ufes.logadapter;
+package com.ufes.logadapter.models;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -26,7 +26,8 @@ public class Log {
         this.usuarioAutenticado = usuarioAutenticado;
     }
 
-    public Log(String msgFalha, String operacao, String nome, LocalDate data, LocalTime hora, boolean usuarioAutenticado) {
+    public Log(String msgFalha, String operacao, String nome, LocalDate data, LocalTime hora,
+            boolean usuarioAutenticado) {
 
         DateTimeFormatter formatterData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter formatterHora = DateTimeFormatter.ofPattern("HH:mm:ss");
@@ -37,7 +38,7 @@ public class Log {
         this.hora = hora.format(formatterHora);
         this.usuarioAutenticado = usuarioAutenticado;
     }
-    
+
     public String getMsgFalha() {
         return msgFalha;
     }
@@ -87,4 +88,3 @@ public class Log {
     }
 
 }
-

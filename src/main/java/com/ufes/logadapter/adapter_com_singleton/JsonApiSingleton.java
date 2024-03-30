@@ -1,10 +1,11 @@
-package com.ufes.logadapter;
+package com.ufes.logadapter.adapter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import com.ufes.logadapter.models.Log;
 
 public class JsonApiSingleton {
 

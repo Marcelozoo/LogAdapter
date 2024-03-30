@@ -11,6 +11,6 @@ package com.ufes.logadapter;
 public class LogAdapter {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Classe Principal");
     }
 }

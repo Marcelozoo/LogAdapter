@@ -1,4 +1,4 @@
-package com.ufes.logadapter.adapter;
+package com.ufes.logadapter.adapter_com_singleton;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.FileWriter;

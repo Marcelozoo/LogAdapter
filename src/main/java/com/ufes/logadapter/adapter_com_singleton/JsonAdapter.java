@@ -1,5 +1,5 @@
 
-package com.ufes.logadapter;
+package com.ufes.logadapter.adapter_com_singleton;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

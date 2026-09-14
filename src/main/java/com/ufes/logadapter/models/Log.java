@@ -8,6 +8,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Log {
 
+
+    private int id;
     private String msgFalha;
     private String operacao;
     private String nome;
@@ -28,6 +30,13 @@ public class Log {
         this.tipoArquivoLog = "JSON";
     }
 
+    public void setId(int id )  {
+        this.id = id;
+    }
+
+    public int getId() {
+        return this.id;
+    }
 
     public void setTipoArquivoLog(String tipoArquivoLog) {
         this.tipoArquivoLog = tipoArquivoLog;

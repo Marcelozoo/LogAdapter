@@ -15,27 +15,26 @@ public class Log {
     private String hora;
     private boolean usuarioAutenticado;
 
-    public Log(String operacao, String nome, LocalDate data, LocalTime hora, boolean usuarioAutenticado) {
-        DateTimeFormatter formatterData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        DateTimeFormatter formatterHora = DateTimeFormatter.ofPattern("HH:mm:ss");
+    public Log() {}
+
+    public Log(String operacao, String nome, String data, String hora, boolean usuarioAutenticado) {
 
         this.operacao = operacao;
         this.nome = nome;
-        this.data = data.format(formatterData);
-        this.hora = hora.format(formatterHora);
+        this.data = data;
+        this.hora = hora;
         this.usuarioAutenticado = usuarioAutenticado;
     }
 
-    public Log(String msgFalha, String operacao, String nome, LocalDate data, LocalTime hora,
+    public Log(String msgFalha, String operacao, String nome, String data, String hora,
             boolean usuarioAutenticado) {
 
-        DateTimeFormatter formatterData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        DateTimeFormatter formatterHora = DateTimeFormatter.ofPattern("HH:mm:ss");
+
         this.msgFalha = msgFalha;
         this.operacao = operacao;
         this.nome = nome;
-        this.data = data.format(formatterData);
-        this.hora = hora.format(formatterHora);
+        this.data = data;
+        this.hora = hora;
         this.usuarioAutenticado = usuarioAutenticado;
     }
 
@@ -43,48 +42,35 @@ public class Log {
         return msgFalha;
     }
 
-    public void setMsgFalha(String msgFalha) {
-        this.msgFalha = msgFalha;
-    }
+
 
     public String getOperacao() {
         return operacao;
     }
 
-    public void setOperacao(String operacao) {
-        this.operacao = operacao;
-    }
+
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+
 
     public String getData() {
         return data;
     }
 
-    public void setData(String data) {
-        this.data = data;
-    }
+
 
     public String getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
+
 
     public boolean isUsuarioAutenticado() {
         return usuarioAutenticado;
     }
 
-    public void setUsuarioAutenticado(boolean usuarioAutenticado) {
-        this.usuarioAutenticado = usuarioAutenticado;
-    }
 
 }

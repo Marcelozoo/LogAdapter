@@ -26,8 +26,32 @@ public class Log {
         this.usuarioAutenticado = usuarioAutenticado;
     }
 
+    public void setOperacao(String operacao) {
+        this.operacao = operacao;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public void setUsuarioAutenticado(boolean usuarioAutenticado) {
+        this.usuarioAutenticado = usuarioAutenticado;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    public void setMsgFalha(String msgFalha) {
+        this.msgFalha = msgFalha;
+    }
+
     public Log(String msgFalha, String operacao, String nome, String data, String hora,
-            boolean usuarioAutenticado) {
+               boolean usuarioAutenticado) {
 
 
         this.msgFalha = msgFalha;

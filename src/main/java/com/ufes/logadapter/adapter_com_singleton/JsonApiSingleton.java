@@ -26,8 +26,13 @@ public class JsonApiSingleton {
         return instancia;
     }
 
-    public void salvarLog(String msg, String operacao, String nome, String data, String hora,
-            boolean usuarioAutenticado) {
+    public void salvarLog(
+                          String operacao,
+                          String nome,
+                          String data,
+                          String hora,
+                          boolean usuarioAutenticado,
+                          String msgFalha) {
 
         if (arquivoJson == null) {
             criaArquivo();
@@ -38,13 +43,9 @@ public class JsonApiSingleton {
                 e.printStackTrace();
             }
         }
-        if (!msg.isEmpty()) {
-            Log log = new Log(msg, operacao, nome, data, hora, usuarioAutenticado);
-            escreveNoArquivoJson(log);
-        } else {
-            Log log = new Log(operacao, nome, data, hora, usuarioAutenticado);
-            escreveNoArquivoJson(log);
-        }
+        Log log = new Log(operacao, nome, data, hora, usuarioAutenticado, msgFalha);
+        this.escreveNoArquivoJson(log);
+
 
     }
 

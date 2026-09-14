@@ -15,105 +15,57 @@ public class Log {
     private String nome;
     private String data;
     private String hora;
-    private boolean usuarioAutenticado;
+    private boolean usuario;
     private String tipoArquivoLog;
 
     public Log() {}
 
-    public Log(String operacao, String nome, String data, String hora, boolean usuarioAutenticado) {
+    public Log(String operacao, String nome, String data, String hora, boolean usuario, String msgFalha) {
 
         this.operacao = operacao;
         this.nome = nome;
         this.data = data;
         this.hora = hora;
-        this.usuarioAutenticado = usuarioAutenticado;
+        this.usuario = usuario;
         this.tipoArquivoLog = "JSON";
+        this.msgFalha = msgFalha;
     }
 
     public void setId(int id )  {
         this.id = id;
     }
-
-    public int getId() {
-        return this.id;
-    }
-
-    public void setTipoArquivoLog(String tipoArquivoLog) {
-        this.tipoArquivoLog = tipoArquivoLog;
-    }
-
-    public String getTipoArquivoLog() {
-        return this.tipoArquivoLog;
-    }
-
     public void setOperacao(String operacao) {
         this.operacao = operacao;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+    public void setUsuario(boolean usuario) {
+        this.usuario = usuario;
+    }
     public void setData(String data) {
         this.data = data;
     }
-
-    public void setUsuarioAutenticado(boolean usuarioAutenticado) {
-        this.usuarioAutenticado = usuarioAutenticado;
-    }
-
     public void setHora(String hora) {
         this.hora = hora;
     }
-
     public void setMsgFalha(String msgFalha) {
         this.msgFalha = msgFalha;
     }
-
-    public Log(String msgFalha, String operacao, String nome, String data, String hora,
-               boolean usuarioAutenticado) {
-
-
-        this.msgFalha = msgFalha;
-        this.operacao = operacao;
-        this.nome = nome;
-        this.data = data;
-        this.hora = hora;
-        this.usuarioAutenticado = usuarioAutenticado;
+    public void setTipoArquivoLog(String tipoArquivoLog) {
+        this.tipoArquivoLog = tipoArquivoLog;
     }
 
     public String getMsgFalha() {
         return msgFalha;
     }
-
-
-
-    public String getOperacao() {
-        return operacao;
-    }
-
-
-
-    public String getNome() {
-        return nome;
-    }
-
-
-
-    public String getData() {
-        return data;
-    }
-
-
-
-    public String getHora() {
-        return hora;
-    }
-
-
-
-    public boolean isUsuarioAutenticado() {
-        return usuarioAutenticado;
+    public String getOperacao() {return operacao;}
+    public String getNome() {return nome;}
+    public String getData() {return data;}
+    public String getHora() {return hora;}
+    public String getTipoArquivoLog() {return this.tipoArquivoLog;}
+    public boolean getUsuario() {
+        return this.usuario;
     }
 
 

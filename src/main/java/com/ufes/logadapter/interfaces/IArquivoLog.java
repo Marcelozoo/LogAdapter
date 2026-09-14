@@ -8,8 +8,13 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public interface IArquivoLog {
-    public void salvarLog(String msg, String operacao, String nome, LocalDate data, LocalTime hora,
-            boolean usuarioAutenticado);
+
+    public void salvarLog(String operacao,
+                          String nome,
+                          LocalDate data,
+                          LocalTime hora,
+                          boolean usuarioAutenticado,
+                          String msgFalha);
 
     public boolean verificaTipoArquivo(String tipoArquivo);
 }

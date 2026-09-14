@@ -23,7 +23,7 @@ public class GerenciadorDeArquivoService {
                              String nome,
                              LocalDate data,
                              LocalTime hora,
-                             boolean usuarioAutenticado) {
+                             String usuarioAutenticado) {
 
         for (IArquivoLog formaSalvar : salvarArquivos) {
             if (formaSalvar.verificaTipoArquivo(tipo)) {

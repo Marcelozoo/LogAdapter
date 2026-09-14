@@ -15,12 +15,12 @@ public class Log {
     private String nome;
     private String data;
     private String hora;
-    private boolean usuario;
+    private String usuario;
     private String tipoArquivoLog;
 
     public Log() {}
 
-    public Log(String operacao, String nome, String data, String hora, boolean usuario, String msgFalha) {
+    public Log(String operacao, String nome, String data, String hora, String usuario, String msgFalha) {
 
         this.operacao = operacao;
         this.nome = nome;
@@ -40,7 +40,7 @@ public class Log {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setUsuario(boolean usuario) {
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
     public void setData(String data) {
@@ -64,7 +64,7 @@ public class Log {
     public String getData() {return data;}
     public String getHora() {return hora;}
     public String getTipoArquivoLog() {return this.tipoArquivoLog;}
-    public boolean getUsuario() {
+    public String getUsuario() {
         return this.usuario;
     }
 

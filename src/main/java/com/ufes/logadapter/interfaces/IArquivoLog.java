@@ -13,7 +13,7 @@ public interface IArquivoLog {
                           String nome,
                           LocalDate data,
                           LocalTime hora,
-                          boolean usuarioAutenticado,
+                          String usuarioAutenticado,
                           String msgFalha);
 
     public boolean verificaTipoArquivo(String tipoArquivo);

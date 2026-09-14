@@ -31,7 +31,7 @@ public class JsonApiSingleton {
                           String nome,
                           String data,
                           String hora,
-                          boolean usuarioAutenticado,
+                          String usuarioAutenticado,
                           String msgFalha) {
 
         if (arquivoJson == null) {

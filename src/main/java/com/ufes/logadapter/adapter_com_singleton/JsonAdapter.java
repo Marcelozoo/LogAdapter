@@ -15,7 +15,7 @@ public class JsonAdapter implements IArquivoLog {
     }
 
     @Override
-    public void salvarLog(String operacao, String nome, LocalDate data, LocalTime hora, boolean usuarioAutenticado, String msgFalha) {
+    public void salvarLog(String operacao, String nome, LocalDate data, LocalTime hora, String usuarioAutenticado, String msgFalha) {
         this.arquivoJson.salvarLog(
                 operacao,
                 nome,

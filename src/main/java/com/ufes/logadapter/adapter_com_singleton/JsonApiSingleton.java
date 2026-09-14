@@ -26,7 +26,7 @@ public class JsonApiSingleton {
         return instancia;
     }
 
-    public void salvarLog(String msg, String operacao, String nome, LocalDate data, LocalTime hora,
+    public void salvarLog(String msg, String operacao, String nome, String data, String hora,
             boolean usuarioAutenticado) {
 
         if (arquivoJson == null) {

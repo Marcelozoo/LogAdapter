@@ -14,6 +14,7 @@ public class Log {
     private String data;
     private String hora;
     private boolean usuarioAutenticado;
+    private String tipoArquivoLog;
 
     public Log() {}
 
@@ -24,6 +25,16 @@ public class Log {
         this.data = data;
         this.hora = hora;
         this.usuarioAutenticado = usuarioAutenticado;
+        this.tipoArquivoLog = "JSON";
+    }
+
+
+    public void setTipoArquivoLog(String tipoArquivoLog) {
+        this.tipoArquivoLog = tipoArquivoLog;
+    }
+
+    public String getTipoArquivoLog() {
+        return this.tipoArquivoLog;
     }
 
     public void setOperacao(String operacao) {

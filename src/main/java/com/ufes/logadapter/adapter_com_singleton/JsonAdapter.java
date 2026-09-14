@@ -4,6 +4,7 @@ package com.ufes.logadapter.adapter_com_singleton;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import com.ufes.logadapter.interfaces.IArquivoLog;
+import com.ufes.logadapter.services.FormatadorDataService;
 
 public class JsonAdapter implements IArquivoLog {
     final private JsonApiSingleton arquivoJson;
@@ -14,9 +15,10 @@ public class JsonAdapter implements IArquivoLog {
     }
 
     @Override
-    public void salvarLog(String msg, String operacao, String nome, LocalDate data, LocalTime hora,
-            boolean usuarioAutenticado) {
-        this.arquivoJson.salvarLog(msg, operacao, nome, data, hora, usuarioAutenticado);
+    public void salvarLog(String msg, String operacao, String nome, LocalDate data, LocalTime hora, boolean usuarioAutenticado) {
+        this.arquivoJson.salvarLog(
+                msg, operacao, nome, FormatadorDataService.formatarData(data), FormatadorDataService.formatarHora(hora), usuarioAutenticado
+        );
     }
 
     @Override
